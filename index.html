@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Taqwa Prayer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Noto+Sans+Arabic:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stage">
+    <div class="shell">
+      <main class="widget" id="widget">
+        <div class="titlebar" id="dragZone">
+          <span class="app-title" data-i18n="appName">Taqwa Prayer</span>
+          <div class="win-btns">
+            <button class="win-btn" id="btnSettings" data-i18n-title="settings" title="Settings" aria-label="Settings">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.5-2-3.4-2.3 1a7 7 0 0 0-2-1.2L14.2 3h-4l-.4 2.5a7 7 0 0 0-2 1.2l-2.3-1-2 3.4 2 1.5a7 7 0 0 0 0 2.4l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 2 1.2l.4 2.5h4l.4-2.5a7 7 0 0 0 2-1.2l2.3 1 2-3.4-2-1.5c.06-.4.1-.8.1-1.2z" stroke-width="1.2"/></svg>
+            </button>
+            <button id="btnMin" class="win-btn" data-i18n-title="minimize" title="Minimize" aria-label="Minimize">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14"/></svg>
+            </button>
+            <button id="btnClose" class="win-btn" data-i18n-title="close" title="Close" aria-label="Close">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+            <button id="btnQuit" class="win-btn quit" data-i18n-title="quit" title="Quit" aria-label="Quit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.3 6.5a8 8 0 1 0 11.4 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="top-row" id="locRow" data-i18n-title="changeLoc" title="Change location">
+          <span class="loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.3-7-11a7 7 0 1 1 14 0c0 5.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+            <span id="locName">Mecca, Saudi Arabia</span>
+          </span>
+        </div>
+
+        <div class="mid">
+          <div class="mid-left">
+            <div class="big-time" id="bigTime">04:39</div>
+            <div class="next-label" id="nextLabel">Fajr in 20m 09s</div>
+            <div class="date-block">
+              <div class="date-small" data-i18n="date">Date</div>
+              <div class="hijri" id="hijriDate">4 Jumādā al-ūlā 1448</div>
+              <div class="greg" id="gregDate">Thu, 15 Oct 2026</div>
+            </div>
+          </div>
+          <svg class="mosque" viewBox="0 0 150 86" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#B7A6E0"/><stop offset="1" stop-color="#8F7CC4"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="75" cy="76" rx="66" ry="5" fill="#E7DEF7"/>
+            <g fill="url(#dome)">
+              <rect x="12" y="48" width="20" height="25" rx="2"/>
+              <rect x="15" y="37" width="14" height="12" rx="7"/>
+              <rect x="20.5" y="29" width="3" height="9"/>
+              <rect x="44" y="38" width="62" height="35" rx="4"/>
+              <path d="M44 41 Q75 -4 106 41 Z"/>
+              <rect x="72.5" y="12" width="5" height="11"/>
+              <rect x="50" y="52" width="9" height="21" rx="4.5" fill="#FBF7EF" opacity=".85"/>
+              <rect x="70.5" y="52" width="9" height="21" rx="4.5" fill="#FBF7EF" opacity=".85"/>
+              <rect x="91" y="52" width="9" height="21" rx="4.5" fill="#FBF7EF" opacity=".85"/>
+              <rect x="8" y="71" width="134" height="5.5" rx="2.75"/>
+            </g>
+            <path d="M78.5 3.5a6.5 6.5 0 1 0 4.2 11.3A5 5 0 1 1 78.5 3.5Z" fill="#C9A86A"/>
+          </svg>
+        </div>
+
+        <div class="progress" aria-hidden="true"><div class="progress-fill" id="dayProgress"></div></div>
+
+        <footer class="timeline" id="timeline"></footer>
+
+        <div class="sheet" id="sheet" hidden>
+          <div class="sheet-title" data-i18n="settings">Settings</div>
+          <div class="group-cap" data-i18n="location">Location</div>
+          <div class="combo">
+            <label><span data-i18n="country">Country</span><input id="inCountry" value="Saudi Arabia" autocomplete="off" spellcheck="false" data-i18n-ph="searchCountry" placeholder="Search country…" /></label>
+            <ul class="combo-list" id="countryList" hidden></ul>
+          </div>
+          <div class="combo">
+            <label><span data-i18n="city">City</span><input id="inCity" value="Mecca" autocomplete="off" spellcheck="false" data-i18n-ph="searchCity" placeholder="Search city…" /></label>
+            <ul class="combo-list" id="cityList" hidden></ul>
+          </div>
+          <label><span data-i18n="method">Method</span>
+            <select id="inMethod">
+              <option value="4">Umm Al-Qura, Makkah</option>
+              <option value="2">ISNA (North America)</option>
+              <option value="3">MWL (Muslim World League)</option>
+              <option value="1">Karachi</option>
+              <option value="5">Egyptian Authority</option>
+              <option value="9">Kuwait</option>
+              <option value="12">Diyanet, Turkey</option>
+            </select>
+          </label>
+          <label><span data-i18n="language">Language</span>
+            <select id="inLang">
+              <option value="en">English</option>
+              <option value="ar">العربية</option>
+              <option value="fr">Français</option>
+            </select>
+          </label>
+          <div class="group-cap" data-i18n="notifications">Notifications</div>
+          <label class="check"><input type="checkbox" id="inNotify" checked /> <span data-i18n="notify">Prayer alerts in Notification Center</span></label>
+          <label><span data-i18n="remind">Remind before</span>
+            <select id="inRemind">
+              <option value="0" selected data-i18n="atTime">At time only</option>
+              <option value="5" data-i18n="r5">5 mins before</option>
+              <option value="10" data-i18n="r10">10 mins before</option>
+              <option value="15" data-i18n="r15">15 mins before</option>
+              <option value="30" data-i18n="r30">30 mins before</option>
+            </select>
+          </label>
+          <div class="group-cap" data-i18n="window">Window</div>
+          <label class="check"><input type="checkbox" id="inCompact" /> <span data-i18n="compact">Compact view</span></label>
+          <div class="sheet-grid">
+            <label class="check"><input type="checkbox" id="inTaskbar" checked /> <span data-i18n="taskbar">Show in taskbar</span></label>
+            <label class="check"><input type="checkbox" id="inTrayMin" checked /> <span data-i18n="traymin">Keep in tray on close</span></label>
+          </div>
+          <label class="check"><input type="checkbox" id="inStartup" /> <span data-i18n="startup">Launch at startup</span></label>
+          <div class="sheet-row">
+            <button id="btnSave" class="btn-primary"><span data-i18n="save">Save</span><span class="btn-orb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+            <button id="btnTest" class="btn-ghost" type="button" data-i18n="test">Test</button>
+            <button id="btnCancel" class="btn-ghost" type="button" data-i18n="close">Close</button>
+          </div>
+          <p class="sheet-hint" data-i18n="pinHint">To pin: run the app, right-click its taskbar icon, then Pin to taskbar.</p>
+        </div>
+      </main>
+    </div>
+  </div>
+<script src="cities.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
