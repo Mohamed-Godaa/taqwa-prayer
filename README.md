@@ -10,6 +10,8 @@ Compact frameless desktop widget (Electron) for Islamic prayer times: location, 
 
 ![Settings sheet with location search, language, notifications and window options](docs/screenshot-settings.png)
 
+![Compact widget floating on a Windows desktop](docs/screenshot-desktop.png)
+
 ## Inspiration
 
 Widget concept inspired by the lovely [Fajr app by Blink22](https://play.google.com/store/apps/details?id=com.blink22.fajr&hl=en) — check it out on the Play Store.
