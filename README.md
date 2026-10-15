@@ -10,6 +10,10 @@ Compact frameless desktop widget (Electron) for Islamic prayer times: location, 
 
 ![Settings sheet with location search, language, notifications and window options](docs/screenshot-settings.png)
 
+## Inspiration
+
+Widget concept inspired by the lovely [Fajr app by Blink22](https://play.google.com/store/apps/details?id=com.blink22.fajr&hl=en) — check it out on the Play Store.
+
 ## Features
 - Compact card: ♡ location, big time, `Fajr in 20m 09s` countdown, date block, mosque mark
 - Timeline: Fajr / Sunrise / Dhuhr / Asr / Maghrib / Isha with line icons, next highlighted, past dimmed, day-progress bar
