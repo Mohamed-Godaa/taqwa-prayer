@@ -2,6 +2,14 @@
 
 Compact frameless desktop widget (Electron) for Islamic prayer times: location, live clock + countdown to next prayer, Hijri/Gregorian date, and a 6-prayer timeline. Notifications land in Windows Notification Center; the taskbar icon shows day progress and a Jump List of today's times.
 
+## Screenshots
+
+| English | العربية (RTL) |
+|---|---|
+| ![Taqwa Prayer widget in English](docs/screenshot-en.png) | ![Taqwa Prayer widget in Arabic with right-to-left layout](docs/screenshot-ar.png) |
+
+![Settings sheet with location search, language, notifications and window options](docs/screenshot-settings.png)
+
 ## Features
 - Compact card: ♡ location, big time, `Fajr in 20m 09s` countdown, date block, mosque mark
 - Timeline: Fajr / Sunrise / Dhuhr / Asr / Maghrib / Isha with line icons, next highlighted, past dimmed, day-progress bar
